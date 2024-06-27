@@ -16,10 +16,11 @@ rejectBtn.addEventListener('click', function () {
   cookieBanner.style.display = 'none';
 });
 
+const savedOption = Cookies.get('cookieBannerDisplayed');
 setTimeout(() => {
-  if (!Cookies.get('cookieBannerDisplayed')) {
+  if (!savedOption) {
     cookieBanner.style.display = 'block';
-  }
+  } 
 }, 2000);
 
 formEl.addEventListener('submit', function (e) {
@@ -34,4 +35,18 @@ formEl.addEventListener('submit', function (e) {
   } else {
     Cookies.remove('username');
   }
+  document.getElementById('user-name').value = '';
+  document.getElementById('birth-date').value = '';
 });
+
+const savedUserName = Cookies.get('username');
+
+if (savedUserName) {
+  document.getElementById('user-name').value = savedUserName;
+}
+
+const savedBirthDate = Cookies.get('birthinfo');
+if (savedUserName) {
+  const birthDate = (document.getElementById('birth-date').value =
+    savedBirthDate);
+}
