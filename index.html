@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Banner</title>
+  <link rel="stylesheet" href="css-reset.css">
+  <link rel="stylesheet" href="stylepage.css">
+  
+
+</head>
+<body>
+<form action="#" id ="userinfo">
+  <label for="user-name">User name:</label>
+  <input type="text" id ="user-name" placeholder ="Type your name">
+  <label for="birth-date">Birth date:</label>
+  <input type="date" id ="birth-date">
+  <button type="submit">Okay</button>
+</form>
+
+  <div class="pop-up" id ="pop-up">
+    <img src="images/cookie.png" alt="">
+    <div class = "content">
+    <h1>Hey! It's cookie here.</h1>
+    <p>Cookies help us deliver the best experience on our website. By using our website, you agree to the use of cookies. <a href="#">Learn more.</a></p>
+    </div>
+    
+    
+    <button type ="button" class="accept" id ="accept">Sure</button>
+    <button type ="button" class ="reject" id ="reject">No, I don't want</button>
+  </div>
+
+<!-- js-cookie library -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<!-- my JS file -->
+<script src="myscript.js"></script>
+</body>
+</html>
